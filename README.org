@@ -1,0 +1,8 @@
+#+TITLE: Spacemacs: best Rails IDE you've ever seen
+* Rails IDE?
+Yeah, I agree. It's the best $LANGUAGE IDE, for sensible values of
+$LANGUAGE (that is, not Java).
+
+More seriously, this is a repository storing a (future?) presentation
+introducing Spacemacs to my coworkers. Hope it's good enough to catch
+their attention and convert a few people to the [[https://stallman.org/saintignucius.jpg][Church of Emacs]].
