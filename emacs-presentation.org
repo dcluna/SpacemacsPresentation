@@ -138,16 +138,16 @@ Benefits:
 - git-link
 - git-timemachine
 ** Status buffer
-https://magit.vc/img/shot/top.png
+[[./magit-status.png]]
 ** Log
-https://camo.githubusercontent.com/04ca7e997f8e3acdb6d2e1a1013be85593640f74/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f38353938312f3436363034322f61623439633964302d623634652d313165322d383933622d6534653637613136306166332e706e67
+[[./magit-log.png]]
 ** Rebase
-http://i.stack.imgur.com/jRTRr.png
+[[./magit-rebase.png]]
 ** Discoverable
-https://www.masteringemacs.org/static/uploads/Screenshot-from-2013-12-06-142317.png
+[[./magit-discoverable.png]]
 ** Diff
-http://2.bp.blogspot.com/-3yRc4uinS9Q/UOAkTMBO-EI/AAAAAAAAI1w/-zguUhcRcME/s1600/Emacs-git-log-short-commit-contents.png
+[[./magit-diff.png]]
 *** Inline diff!
-http://www.bertschneider.de/images/magit-chunks.png
+[[./magit-inline-diff.png]]
 * such Rails
 * wow (demo time)
