@@ -1,0 +1,136 @@
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:t reveal_control:t
+#+OPTIONS: reveal_mathjax:t reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1200 reveal_height:800
+#+OPTIONS: toc:nil
+#+REVEAL_MARGIN: 0.0
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.0
+#+REVEAL_TRANS: none
+#+REVEAL_THEME: night
+#+REVEAL_HLEVEL: 1
+#+REVEAL_DEFAULT_FRAG_STYLE: roll-in
+
+#+TITLE: Spacemacs: best Rails IDE you've ever seen
+* Spacemacs - an introduction
+** What is Emacs?
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag-idx (1 2 3 4) 
+- Text editor
+- Swiss army knife
+- Best Git client I've ever worked with
+- "Last Lisp Machine"
+** What is Spacemacs?
+*** First things first
+#+ATTR_HTML: :width 100%
+[[./dogemacs.png]]
+*** Really, what is Spacemacs?
+#+ATTR_REVEAL: :frag t
+From their [[https://github.com/syl20bnr/spacemacs/][Github]] page:
+#+BEGIN_QUOTE
+Spacemacs is a new way to experience Emacs -- a sophisticated and polished set-up focused on ergonomics, mnemonics and consistency.
+
+Just clone it, launch it, then press the space bar to explore the interactive list of carefully-chosen key bindings. You can also press the home buffer's [?] button for some great first key bindings to try.
+
+Spacemacs can be used naturally by both Emacs and Vim users -- you can even mix the two editing styles. Switching easily between input styles makes Spacemacs a great tool for pair-programming.
+#+END_QUOTE
+** Why should I care?
+#+ATTR_REVEAL: :frag t
+It comes with a lot of integrated goodies to help with development.
+"Help" is a misnomer here - most modes are on par with so-called
+"professional" tools, and for less mainstream languages, it's actually
+the best development environment.
+
+#+ATTR_REVEAL: :frag t
+It can be used by both Vim and Emacs users - so if you think Emacs "is
+a good OS, just lacking a decent editor", think again.
+* so Vim
+
+* much discoverability
+
+** Which-key
+#+BEGIN_QUOTE
+Which-key displays the key bindings following your currently entered incomplete command (a prefix) in a popup.
+#+END_QUOTE
+
+#+ATTR_REVEAL: :frag t
+https://github.com/justbur/emacs-which-key/raw/master/img/which-key-bottom.png
+** Help screens
+
+** Helpful community
+- [[https://github.com/syl20bnr/spacemacs/][Github]]
+- [[https://gitter.im/syl20bnr/spacemacs][Gitter chat]]
+- Blog posts
+#+BEGIN_NOTES
+Spacemacs devs' are usually responsive to PRs (albeit somewhat slow to
+merge), there are lots of quality blog posts and new features are
+being added all the time.
+#+END_NOTES
+* much layers (IDE-style features)
+
+** What is a layer?
+#+BEGIN_QUOTE
+Layers help collect related packages together to provide features. For
+example, the python layer provides auto-completion, syntax checking,
+and repl support for python files. This approach helps keep
+configuration organized and reduces overhead for the user by keeping
+them from having to think about what packages to install
+#+END_QUOTE
+
+#+ATTR_REVEAL: :frag t
+In other words: preconfigured goodies for your favorite language.
+
+** Auto-completion
+Two backends for this: [[http://company-mode.github.io/][company]] and [[http://auto-complete.org/][auto-complete]]. Both are good on
+their own right.
+
+#+ATTR_REVEAL: :frag (roll-in roll-in) :frag-idx (1 2) 
+- Most modes have no Intellisense!
+  #+BEGIN_NOTES
+  That is, they don't feature context-aware autocompletion. Bummer.
+  #+END_NOTES
+- Some languages (such as Ruby and Python) implement it
+  #+BEGIN_NOTES
+  It's mostly dynamic languages, that basically run a REPL and can
+  provide much better run-time information. Try that in Java or C# -
+  Emacs' Java integration still sucks, despite Eclim and other projects.
+  But, if you're an Emacs user, you're probably better served by
+  lighter-weight languages.
+  #+END_NOTES
+
+#+BEGIN_NOTES
+I'm biased towards company, but only because it's Spacemacs' default.
+#+END_NOTES
+** Syntax checking
+[[http://www.flycheck.org/en/latest/][Flycheck]], Emacs' flexible backend for almost every syntax-checking tool.
+
+#+ATTR_REVEAL: :frag t
+Basically anything that can output an Emacs-style "backtrace" can be
+hooked into it.
+** Code snippets!
+[[http://joaotavora.github.com/yasnippet/][Yasnippet]], Emacs' backend for code snippets, actually accepts Sublime
+Text snippets.
+
+#+ATTR_REVEAL: :frag t
+It also accepts inline Lisp code (so you can make decisions about how to expand a snippet based on the state of your editor - how cool is that?)
+** REPL support
+
+** MELPA
+#+BEGIN_NOTES
+Did I mention Emacs has a package manager? After that, all else
+is...forgivable. Before Vimmers start complaining, you have Vundle.
+#+END_NOTES
+* very Git
+** It's Magit!
+Thanks to [[https://magit.vc/][Magit]], Spacemacs has one of the best Git clients available.
+
+#+ATTR_REVEAL: :frag t
+Benefits:
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in roll-in) :frag-idx (1 2 3 4 5) 
+- Comprehensive status buffer
+- Most commands are 2-3 keystrokes away
+- Discoverable interface
+  
+  It makes git look easy...almost.
+- git-link
+- git-timemachine
+* such Rails
+* wow (demo time)
