@@ -56,8 +56,10 @@ https://github.com/justbur/emacs-which-key/raw/master/img/which-key-bottom.png
 ** Help screens
 
 ** Helpful community
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag-idx (1 2 3 4) 
 - [[https://github.com/syl20bnr/spacemacs/][Github]]
 - [[https://gitter.im/syl20bnr/spacemacs][Gitter chat]]
+- [[http://spacemacs.org/doc/DOCUMENTATION][Quality documentation]]
 - Blog posts
 #+BEGIN_NOTES
 Spacemacs devs' are usually responsive to PRs (albeit somewhat slow to
@@ -112,7 +114,10 @@ Text snippets.
 #+ATTR_REVEAL: :frag t
 It also accepts inline Lisp code (so you can make decisions about how to expand a snippet based on the state of your editor - how cool is that?)
 ** REPL support
-
+#+ATTR_REVEAL: :frag (make-list n 'roll-in) :frag-idx (number-sequence 1 n)
+- Run a REPL inside the editor
+- Run commands while editing the file
+- REPLs get Vim-style keybindings for free
 ** MELPA
 #+BEGIN_NOTES
 Did I mention Emacs has a package manager? After that, all else
@@ -132,5 +137,17 @@ Benefits:
   It makes git look easy...almost.
 - git-link
 - git-timemachine
+** Status buffer
+https://magit.vc/img/shot/top.png
+** Log
+https://camo.githubusercontent.com/04ca7e997f8e3acdb6d2e1a1013be85593640f74/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f38353938312f3436363034322f61623439633964302d623634652d313165322d383933622d6534653637613136306166332e706e67
+** Rebase
+http://i.stack.imgur.com/jRTRr.png
+** Discoverable
+https://www.masteringemacs.org/static/uploads/Screenshot-from-2013-12-06-142317.png
+** Diff
+http://2.bp.blogspot.com/-3yRc4uinS9Q/UOAkTMBO-EI/AAAAAAAAI1w/-zguUhcRcME/s1600/Emacs-git-log-short-commit-contents.png
+*** Inline diff!
+http://www.bertschneider.de/images/magit-chunks.png
 * such Rails
 * wow (demo time)
