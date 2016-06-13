@@ -13,7 +13,7 @@
 #+TITLE: Spacemacs: best Rails IDE you've ever seen
 * Spacemacs - an introduction
 ** What is Emacs?
-#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag-idx (1 2 3 4) 
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag-idx (number-sequence 1 4)
 - Text editor
 - Swiss army knife
 - Best Git client I've ever worked with
@@ -43,9 +43,58 @@ the best development environment.
 It can be used by both Vim and Emacs users - so if you think Emacs "is
 a good OS, just lacking a decent editor", think again.
 * so Vim
+** Ubiquitous hjkl movement
+#+ATTR_REVEAL: :frag t
+No need to move your fingers out of the home row - hjkl works as expected.
 
+#+ATTR_REVEAL: :frag t
+Not only that, but almost all Vim commands work as expected.
+
+#+ATTR_REVEAL: :frag t
+Emacs keybindings' are setup per-mode, so to make it work seamlessly
+across all modes is harder than it looks.
+
+#+ATTR_REVEAL: :frag t
+Even very customized modes, such as Org-mode and Magit, accept hjkl movement.
+** Vim "language" works, and is extensible
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3)
+- Verbs (a, i, o, y, p, c, d, >, <)
+- Movement keys (f, t, /, ?, *, #, %)
+- Bonus: you can define your own, if you know enough Emacs Lisp (even the "original" operators are defined like this)
+** Ex commands
+Some cookbook examples:
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag-idx (1 2 3 4)
+- s/hello/world
+#+BEGIN_NOTES
+Substitutes 'hello' for 'world' in the current line
+#+END_NOTES
+- g/cookbook/d
+#+BEGIN_NOTES
+Deletes lines matching 'cookbook'
+#+END_NOTES
+- 4,15t$
+#+BEGIN_NOTES
+Moves content from lines 4 to 15 to the end of the current file
+#+END_NOTES
+- g/test/m0
+#+BEGIN_NOTES
+Moves the first line matching 'test' to the first line of the current file
+#+END_NOTES
+** Registers
+They basically work as expected. The verb is " (double quote). Some
+examples to illustrate:
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3)
+- "ay$ (overwrite register 'r' with contents from point to the end of the line)
+- "A2dd (append to register 'a' the contents of the next two lines and delete them)
+- qb <some commands here> (see next section...)
+** Keyboard macros
+The 'q' verb is used for saving keyboard macros. Save to registers,
+and even edit them (try it with "C-x C-k e").
+** Leader keys
+- Universal leader key (SPC)
+- Mode-specific leader key (,)
+** Ergonomic
 * much discoverability
-
 ** Which-key
 #+BEGIN_QUOTE
 Which-key displays the key bindings following your currently entered incomplete command (a prefix) in a popup.
@@ -114,7 +163,7 @@ Text snippets.
 #+ATTR_REVEAL: :frag t
 It also accepts inline Lisp code (so you can make decisions about how to expand a snippet based on the state of your editor - how cool is that?)
 ** REPL support
-#+ATTR_REVEAL: :frag (make-list n 'roll-in) :frag-idx (number-sequence 1 n)
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3)
 - Run a REPL inside the editor
 - Run commands while editing the file
 - REPLs get Vim-style keybindings for free
