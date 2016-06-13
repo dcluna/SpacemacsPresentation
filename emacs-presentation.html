@@ -26,7 +26,7 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide"><h1 class="title">Spacemacs: best Rails IDE you've ever seen</h1><h2 class="author">Daniel Luna</h2><p class="date">Created: 2016-06-12 Sun 22:35</p>
+<section id="sec-title-slide"><h1 class="title">Spacemacs: best Rails IDE you've ever seen</h1><h2 class="author">Daniel Luna</h2><p class="date">Created: 2016-06-12 Sun 23:44</p>
 </section>
 <section>
 <section id="slide-orgheadline6">
@@ -54,13 +54,20 @@
 <p><img src="./dogemacs.png" alt="dogemacs.png" width="100%" />
 </p>
 </div>
+<aside class="notes">
+<p>
+TODO: Make this fit inside the current slide!
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline3">
 <h4 id="orgheadline3">Really, what is Spacemacs?</h4>
 <p class="fragment">
 From their <a href="https://github.com/syl20bnr/spacemacs/" class="fragment">Github</a> page:
 </p>
-<blockquote nil>
+
+<blockquote  class="fragment roll-in">
 <p>
 Spacemacs is a new way to experience Emacs &#x2013; a sophisticated and polished set-up focused on ergonomics, mnemonics and consistency.
 </p>
@@ -78,6 +85,9 @@ Spacemacs can be used naturally by both Emacs and Vim users &#x2013; you can eve
 <h3 id="orgheadline5">Why should I care?</h3>
 <p class="fragment">
 It comes with a lot of integrated goodies to help with development.
+</p>
+
+<p class="fragment">
 "Help" is a misnomer here - most modes are on par with so-called
 "professional" tools, and for less mainstream languages, it's actually
 the best development environment.
@@ -97,7 +107,7 @@ a good OS, just lacking a decent editor", think again.
 <section id="slide-orgheadline7">
 <h3 id="orgheadline7">Ubiquitous hjkl movement</h3>
 <p class="fragment">
-No need to move your fingers out of the home row - hjkl works as expected.
+No need to move your fingers out of the home row - hjkl Just Works™
 </p>
 
 <p class="fragment">
@@ -106,11 +116,8 @@ Not only that, but almost all Vim commands work as expected.
 
 <p class="fragment">
 Emacs keybindings' are setup per-mode, so to make it work seamlessly
-across all modes is harder than it looks.
-</p>
-
-<p class="fragment">
-Even very customized modes, such as Org-mode and Magit, accept hjkl movement.
+across all modes (even very customized ones, such as Org-mode and Magit) is
+harder than it looks.
 </p>
 </section>
 <section id="slide-orgheadline8">
@@ -134,6 +141,7 @@ Some cookbook examples:
 <li class="fragment roll-in"><p>
 g/test/m0
 </p>
+
 <aside class="notes">
 <p>
 Substitutes 'hello' for 'world' in the current line
@@ -171,30 +179,45 @@ examples to illustrate:
 <section id="slide-orgheadline11">
 <h3 id="orgheadline11">Keyboard macros</h3>
 <p>
-The 'q' verb is used for saving keyboard macros. Save to registers,
-and even edit them (try it with "C-x C-k e").
+The 'q' verb is used for saving keyboard macros.
 </p>
+
+<ul>
+<li class="fragment roll-in">Can be saved to registers</li>
+<li class="fragment roll-in">Can be edited ("C-x C-k e")
+<img src="./keyboard-macro-editor.png" alt="keyboard-macro-editor.png" /></li>
+
+</ul>
 </section>
 <section id="slide-orgheadline12">
 <h3 id="orgheadline12">Leader keys</h3>
 <ul>
-<li>Universal leader key (SPC)</li>
-<li>Mode-specific leader key (,)</li>
+<li class="fragment roll-in">Universal leader key (SPC)</li>
+<li class="fragment roll-in">Mode-specific leader key (,)</li>
 
 </ul>
 </section>
 <section id="slide-orgheadline13">
-<h3 id="orgheadline13">Ergonomic</h3>
+<h3 id="orgheadline13">Ergonomics</h3>
+<p>
+Summary:
+</p>
+<ul>
+<li class="fragment roll-in">Vim keybindings everywhere</li>
+<li class="fragment roll-in">Every command is triggered with at most 3 keystrokes.</li>
+<li class="fragment roll-in">Emacs = "Escape Meta Alt Control Shift"? Not anymore.</li>
+
+</ul>
 </section>
 </section>
 <section>
-<section id="slide-orgheadline18">
-<h2 id="orgheadline18">much discoverability</h2>
-<div class="outline-text-2" id="text-orgheadline18">
+<section id="slide-orgheadline22">
+<h2 id="orgheadline22">much discoverability</h2>
+<div class="outline-text-2" id="text-orgheadline22">
 </div></section>
 <section id="slide-orgheadline15">
 <h3 id="orgheadline15">Which-key</h3>
-<blockquote nil>
+<blockquote  class="fragment roll-in">
 <p>
 Which-key displays the key bindings following your currently entered incomplete command (a prefix) in a popup.
 </p>
@@ -202,16 +225,48 @@ Which-key displays the key bindings following your currently entered incomplete 
 
 
 <div class="figure">
-<p><img src="https://github.com/justbur/emacs-which-key/raw/master/img/which-key-bottom.png" alt="which-key-bottom.png" class="fragment" />
+<p><img src="./which-key.png" alt="which-key.png" class="fragment" />
 </p>
 </div>
 </section>
+<section id="slide-orgheadline20">
+<h3 id="orgheadline20">Help screens</h3>
+<div class="outline-text-3" id="text-orgheadline20">
+</div></section>
 <section id="slide-orgheadline16">
-<h3 id="orgheadline16">Help screens</h3>
+<h4 id="orgheadline16">Integrated help screens for every command</h4>
 
+<div class="figure">
+<p><img src="./help-screen-describe-key.png" alt="help-screen-describe-key.png" />
+</p>
+</div>
 </section>
 <section id="slide-orgheadline17">
-<h3 id="orgheadline17">Helpful community</h3>
+<h4 id="orgheadline17">Integrated man pages (woman)</h4>
+
+<div class="figure">
+<p><img src="./curl-manpage.png" alt="curl-manpage.png" />
+</p>
+</div>
+</section>
+<section id="slide-orgheadline18">
+<h4 id="orgheadline18">Apropos for commands</h4>
+
+<div class="figure">
+<p><img src="./helm-apropos.png" alt="helm-apropos.png" />
+</p>
+</div>
+</section>
+<section id="slide-orgheadline19">
+<h4 id="orgheadline19">Various 'describe' commands</h4>
+
+<div class="figure">
+<p><img src="./spacemacs-describes.png" alt="spacemacs-describes.png" />
+</p>
+</div>
+</section>
+<section id="slide-orgheadline21">
+<h3 id="orgheadline21">Helpful community</h3>
 <ul>
 <li class="fragment roll-in"><a href="https://github.com/syl20bnr/spacemacs/">Github</a></li>
 <li class="fragment roll-in"><a href="https://gitter.im/syl20bnr/spacemacs">Gitter chat</a></li>
@@ -230,13 +285,13 @@ being added all the time.
 </section>
 </section>
 <section>
-<section id="slide-orgheadline25">
-<h2 id="orgheadline25">much layers (IDE-style features)</h2>
-<div class="outline-text-2" id="text-orgheadline25">
+<section id="slide-orgheadline30">
+<h2 id="orgheadline30">much layers (IDE-style features)</h2>
+<div class="outline-text-2" id="text-orgheadline30">
 </div></section>
-<section id="slide-orgheadline19">
-<h3 id="orgheadline19">What is a layer?</h3>
-<blockquote nil>
+<section id="slide-orgheadline23">
+<h3 id="orgheadline23">What is a layer?</h3>
+<blockquote  class="fragment roll-in">
 <p>
 Layers help collect related packages together to provide features. For
 example, the python layer provides auto-completion, syntax checking,
@@ -251,27 +306,30 @@ In other words: preconfigured goodies for your favorite language.
 </p>
 
 </section>
-<section id="slide-orgheadline20">
-<h3 id="orgheadline20">Auto-completion</h3>
+<section id="slide-orgheadline24">
+<h3 id="orgheadline24">Auto-completion</h3>
 <p>
 Two backends for this: <a href="http://company-mode.github.io/">company</a> and <a href="http://auto-complete.org/">auto-complete</a>. Both are good on
 their own right.
 </p>
 
-<ul>
-<li class="fragment roll-in"><p>
-Most modes have no Intellisense!
+
+<div class="figure">
+<p><img src="./company-semantic.png" alt="company-semantic.png" class="fragment" />
 </p>
+</div>
+
+<ul>
+<li class="fragment roll-in">Most modes have no Intellisense!</li>
+<li class="fragment roll-in">Some languages (such as Ruby and Python) implement it</li>
+
+</ul>
+
 <aside class="notes">
 <p>
 That is, they don't feature context-aware autocompletion. Bummer.
 </p>
 
-</aside></li>
-<li class="fragment roll-in"><p>
-Some languages (such as Ruby and Python) implement it
-</p>
-<aside class="notes">
 <p>
 It's mostly dynamic languages, that basically run a REPL and can
 provide much better run-time information. Try that in Java or C# -
@@ -280,41 +338,56 @@ But, if you're an Emacs user, you're probably better served by
 lighter-weight languages.
 </p>
 
-</aside></li>
-
-</ul>
-
-<aside class="notes">
 <p>
 I'm biased towards company, but only because it's Spacemacs' default.
 </p>
 
 </aside>
 </section>
-<section id="slide-orgheadline21">
-<h3 id="orgheadline21">Syntax checking</h3>
+<section id="slide-orgheadline25">
+<h3 id="orgheadline25">Syntax checking</h3>
 <p>
 <a href="http://www.flycheck.org/en/latest/">Flycheck</a>, Emacs' flexible backend for almost every syntax-checking tool.
 </p>
+
+
+<div class="figure">
+<p><img src="./flycheck-annotated.png" alt="flycheck-annotated.png" class="fragment" />
+</p>
+</div>
 
 <p class="fragment">
 Basically anything that can output an Emacs-style "backtrace" can be
 hooked into it.
 </p>
 </section>
-<section id="slide-orgheadline22">
-<h3 id="orgheadline22">Code snippets!</h3>
+<section id="slide-orgheadline26">
+<h3 id="orgheadline26">Code snippets!</h3>
 <p>
 <a href="http://joaotavora.github.com/yasnippet/">Yasnippet</a>, Emacs' backend for code snippets, actually accepts Sublime
 Text snippets.
 </p>
 
+
+<div class="figure">
+<p><img src="./yasnippet.png" alt="yasnippet.png" class="fragment" />
+</p>
+</div>
+
 <p class="fragment">
 It also accepts inline Lisp code (so you can make decisions about how to expand a snippet based on the state of your editor - how cool is that?)
 </p>
+
+<aside class="notes">
+<p>
+TODO: make this last line be displayed inside the current slide! There must be a
+way to make it fit.
+</p>
+
+</aside>
 </section>
-<section id="slide-orgheadline23">
-<h3 id="orgheadline23">REPL support</h3>
+<section id="slide-orgheadline27">
+<h3 id="orgheadline27">REPL support</h3>
 <ul>
 <li class="fragment roll-in">Run a REPL inside the editor</li>
 <li class="fragment roll-in">Run commands while editing the file</li>
@@ -322,8 +395,50 @@ It also accepts inline Lisp code (so you can make decisions about how to expand 
 
 </ul>
 </section>
-<section id="slide-orgheadline24">
-<h3 id="orgheadline24">MELPA</h3>
+<section id="slide-orgheadline28">
+<h3 id="orgheadline28">Obligatory REPL screenshot</h3>
+
+<div class="figure">
+<p><img src="./rails-console-inside-emacs.png" alt="rails-console-inside-emacs.png" class="fragment" />
+</p>
+</div>
+</section>
+<section id="slide-orgheadline29">
+<h3 id="orgheadline29">MELPA</h3>
+<p class="fragment">
+From their <a href="https://melpa.org/" class="fragment">website</a>:
+</p>
+
+<blockquote  class="fragment roll-in">
+<p>
+Up-to-date packages built on our servers from upstream source
+</p>
+
+<p>
+Installable in any Emacs with 'package.el' - no local version-control tools needed
+</p>
+
+<p>
+Curated - no obsolete, renamed, forked or randomly hacked packages
+</p>
+
+<p>
+Comprehensive - more packages than any other archive
+</p>
+
+<p>
+Automatic updates - new commits result in new packages
+</p>
+
+<p>
+Extensible - contribute recipes via github, and we'll build the packages
+</p>
+</blockquote>
+
+<p class="fragment">
+Yeah, Emacs has its own apt-get/yum/emerge/whatever.
+</p>
+
 <aside class="notes">
 <p>
 Did I mention Emacs has a package manager? After that, all else
@@ -334,12 +449,12 @@ is&#x2026;forgivable. Before Vimmers start complaining, you have Vundle.
 </section>
 </section>
 <section>
-<section id="slide-orgheadline33">
-<h2 id="orgheadline33">very Git</h2>
-<div class="outline-text-2" id="text-orgheadline33">
+<section id="slide-orgheadline38">
+<h2 id="orgheadline38">very Git</h2>
+<div class="outline-text-2" id="text-orgheadline38">
 </div></section>
-<section id="slide-orgheadline26">
-<h3 id="orgheadline26">It's Magit!</h3>
+<section id="slide-orgheadline31">
+<h3 id="orgheadline31">It's Magit!</h3>
 <p>
 Thanks to <a href="https://magit.vc/">Magit</a>, Spacemacs has one of the best Git clients available.
 </p>
@@ -362,48 +477,48 @@ It makes git look easy&#x2026;almost.
 
 </ul>
 </section>
-<section id="slide-orgheadline27">
-<h3 id="orgheadline27">Status buffer</h3>
+<section id="slide-orgheadline32">
+<h3 id="orgheadline32">Status buffer</h3>
 
 <div class="figure">
 <p><img src="./magit-status.png" alt="magit-status.png" />
 </p>
 </div>
 </section>
-<section id="slide-orgheadline28">
-<h3 id="orgheadline28">Log</h3>
+<section id="slide-orgheadline33">
+<h3 id="orgheadline33">Log</h3>
 
 <div class="figure">
 <p><img src="./magit-log.png" alt="magit-log.png" />
 </p>
 </div>
 </section>
-<section id="slide-orgheadline29">
-<h3 id="orgheadline29">Rebase</h3>
+<section id="slide-orgheadline34">
+<h3 id="orgheadline34">Rebase</h3>
 
 <div class="figure">
 <p><img src="./magit-rebase.png" alt="magit-rebase.png" />
 </p>
 </div>
 </section>
-<section id="slide-orgheadline30">
-<h3 id="orgheadline30">Discoverable</h3>
+<section id="slide-orgheadline35">
+<h3 id="orgheadline35">Discoverable</h3>
 
 <div class="figure">
 <p><img src="./magit-discoverable.png" alt="magit-discoverable.png" />
 </p>
 </div>
 </section>
-<section id="slide-orgheadline32">
-<h3 id="orgheadline32">Diff</h3>
+<section id="slide-orgheadline37">
+<h3 id="orgheadline37">Diff</h3>
 
 <div class="figure">
 <p><img src="./magit-diff.png" alt="magit-diff.png" />
 </p>
 </div>
 </section>
-<section id="slide-orgheadline31">
-<h4 id="orgheadline31">Inline diff!</h4>
+<section id="slide-orgheadline36">
+<h4 id="orgheadline36">Inline diff!</h4>
 
 <div class="figure">
 <p><img src="./magit-inline-diff.png" alt="magit-inline-diff.png" />
@@ -412,13 +527,24 @@ It makes git look easy&#x2026;almost.
 </section>
 </section>
 <section>
-<section id="slide-orgheadline34">
-<h2 id="orgheadline34">such Rails</h2>
+<section id="slide-orgheadline39">
+<h2 id="orgheadline39">fun fact</h2>
+<ul>
+<li class="fragment roll-in">This presentation was made with Emacs' awesome <a href="http://orgmode.org/">Org-mode</a>.</li>
+<li class="fragment roll-in">Don't believe it? Look at the <a href="https://raw.githubusercontent.com/dcluna/SpacemacsPresentation/master/emacs-presentation.org">source</a>.</li>
+<li class="fragment roll-in"><img src="./spacemacs-presentation-source.png" alt="spacemacs-presentation-source.png" /></li>
+
+</ul>
 </section>
 </section>
 <section>
-<section id="slide-orgheadline35">
-<h2 id="orgheadline35">wow (demo time)</h2>
+<section id="slide-orgheadline40">
+<h2 id="orgheadline40">wow</h2>
+
+<div class="figure">
+<p><img src="./momacs.png" alt="momacs.png" class="fragment" />
+</p>
+</div>
 </section>
 </section>
 </div>

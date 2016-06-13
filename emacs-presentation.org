@@ -22,9 +22,14 @@
 *** First things first
 #+ATTR_HTML: :width 100%
 [[./dogemacs.png]]
+#+BEGIN_NOTES
+TODO: Make this fit inside the current slide!
+#+END_NOTES
 *** Really, what is Spacemacs?
 #+ATTR_REVEAL: :frag t
 From their [[https://github.com/syl20bnr/spacemacs/][Github]] page:
+
+#+ATTR_REVEAL: :frag t
 #+BEGIN_QUOTE
 Spacemacs is a new way to experience Emacs -- a sophisticated and polished set-up focused on ergonomics, mnemonics and consistency.
 
@@ -35,6 +40,8 @@ Spacemacs can be used naturally by both Emacs and Vim users -- you can even mix 
 ** Why should I care?
 #+ATTR_REVEAL: :frag t
 It comes with a lot of integrated goodies to help with development.
+
+#+ATTR_REVEAL: :frag t
 "Help" is a misnomer here - most modes are on par with so-called
 "professional" tools, and for less mainstream languages, it's actually
 the best development environment.
@@ -45,17 +52,15 @@ a good OS, just lacking a decent editor", think again.
 * so Vim
 ** Ubiquitous hjkl movement
 #+ATTR_REVEAL: :frag t
-No need to move your fingers out of the home row - hjkl works as expected.
+No need to move your fingers out of the home row - hjkl Just Works™
 
 #+ATTR_REVEAL: :frag t
 Not only that, but almost all Vim commands work as expected.
 
 #+ATTR_REVEAL: :frag t
 Emacs keybindings' are setup per-mode, so to make it work seamlessly
-across all modes is harder than it looks.
-
-#+ATTR_REVEAL: :frag t
-Even very customized modes, such as Org-mode and Magit, accept hjkl movement.
+across all modes (even very customized ones, such as Org-mode and Magit) is
+harder than it looks.
 ** Vim "language" works, and is extensible
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3)
 - Verbs (a, i, o, y, p, c, d, >, <)
@@ -68,6 +73,7 @@ Some cookbook examples:
 - g/cookbook/d
 - 4,15t$
 - g/test/m0
+
   #+BEGIN_NOTES
   Substitutes 'hello' for 'world' in the current line
 
@@ -85,15 +91,25 @@ examples to illustrate:
 - "A2dd (append to register 'a' the contents of the next two lines and delete them)
 - qb <some commands here> (see next section...)
 ** Keyboard macros
-The 'q' verb is used for saving keyboard macros. Save to registers,
-and even edit them (try it with "C-x C-k e").
+The 'q' verb is used for saving keyboard macros.
+
+#+ATTR_REVEAL: :frag (roll-in roll-in) :frag-idx (1 2) 
+- Can be saved to registers
+- Can be edited ("C-x C-k e")
+  [[./keyboard-macro-editor.png]]
 ** Leader keys
+#+ATTR_REVEAL: :frag (roll-in roll-in) :frag-idx (1 2)
 - Universal leader key (SPC)
 - Mode-specific leader key (,)
 ** Ergonomics
-Every command is triggered with at most 3 keystrokes.
+Summary:
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3)
+- Vim keybindings everywhere
+- Every command is triggered with at most 3 keystrokes.
+- Emacs = "Escape Meta Alt Control Shift"? Not anymore.
 * much discoverability
 ** Which-key
+#+ATTR_REVEAL: :frag t
 #+BEGIN_QUOTE
 Which-key displays the key bindings following your currently entered incomplete command (a prefix) in a popup.
 #+END_QUOTE
@@ -101,14 +117,13 @@ Which-key displays the key bindings following your currently entered incomplete 
 #+ATTR_REVEAL: :frag t
 [[./which-key.png]]
 ** Help screens
-#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag-idx (1 2 3 4)
-- Integrated help screens for every command
+*** Integrated help screens for every command
   [[./help-screen-describe-key.png]]
-- Integrated man pages (woman)
+*** Integrated man pages (woman)
   [[./curl-manpage.png]]
-- Apropos for commands
+*** Apropos for commands
   [[./helm-apropos.png]]
-- Various 'describe' commands
+*** Various 'describe' commands
   [[./spacemacs-describes.png]]
 ** Helpful community
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag-idx (1 2 3 4) 
@@ -123,6 +138,7 @@ being added all the time.
 #+END_NOTES
 * much layers (IDE-style features)
 ** What is a layer?
+#+ATTR_REVEAL: :frag t
 #+BEGIN_QUOTE
 Layers help collect related packages together to provide features. For
 example, the python layer provides auto-completion, syntax checking,
@@ -174,22 +190,40 @@ Text snippets.
 
 #+ATTR_REVEAL: :frag t
 It also accepts inline Lisp code (so you can make decisions about how to expand a snippet based on the state of your editor - how cool is that?)
+
+#+BEGIN_NOTES
+TODO: make this last line be displayed inside the current slide! There must be a
+way to make it fit.
+#+END_NOTES
 ** REPL support
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3)
 - Run a REPL inside the editor
 - Run commands while editing the file
 - REPLs get Vim-style keybindings for free
+** Obligatory REPL screenshot
+#+ATTR_REVEAL: :frag t
+[[./rails-console-inside-emacs.png]]
 ** MELPA
+#+ATTR_REVEAL: :frag t
 From their [[https://melpa.org][website]]:
 
+#+ATTR_REVEAL: :frag t
 #+BEGIN_QUOTE
 Up-to-date packages built on our servers from upstream source
+
 Installable in any Emacs with 'package.el' - no local version-control tools needed
+
 Curated - no obsolete, renamed, forked or randomly hacked packages
+
 Comprehensive - more packages than any other archive
+
 Automatic updates - new commits result in new packages
+
 Extensible - contribute recipes via github, and we'll build the packages
 #+END_QUOTE
+
+#+ATTR_REVEAL: :frag t
+Yeah, Emacs has its own apt-get/yum/emerge/whatever.
 
 #+BEGIN_NOTES
 Did I mention Emacs has a package manager? After that, all else
@@ -221,4 +255,11 @@ Benefits:
 [[./magit-diff.png]]
 *** Inline diff!
 [[./magit-inline-diff.png]]
-* wow (demo time)
+* fun fact
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3) 
+- This presentation was made with Emacs' awesome [[http://orgmode.org/][Org-mode]].
+- Don't believe it? Look at the [[https://raw.githubusercontent.com/dcluna/SpacemacsPresentation/master/emacs-presentation.org][source]].
+- [[./spacemacs-presentation-source.png]]
+* wow
+#+ATTR_REVEAL: :frag t
+[[./momacs.png]]
