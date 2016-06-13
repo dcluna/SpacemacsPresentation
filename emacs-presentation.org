@@ -255,6 +255,16 @@ Benefits:
 [[./magit-diff.png]]
 *** Inline diff!
 [[./magit-inline-diff.png]]
+** git-timemachine
+#+ATTR_REVEAL: :frag t
+Step through historic versions of git controlled file using everyone's favourite editor
+
+#+ATTR_REVEAL: :frag t
+[[./git-timemachine.png]]
+
+#+BEGIN_NOTES
+TODO: make this fit inside the slide
+#+END_NOTES
 * fun fact
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3) 
 - This presentation was made with Emacs' awesome [[http://orgmode.org/][Org-mode]].
