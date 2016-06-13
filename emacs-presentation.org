@@ -65,21 +65,18 @@ Even very customized modes, such as Org-mode and Magit, accept hjkl movement.
 Some cookbook examples:
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag-idx (1 2 3 4)
 - s/hello/world
-#+BEGIN_NOTES
-Substitutes 'hello' for 'world' in the current line
-#+END_NOTES
 - g/cookbook/d
-#+BEGIN_NOTES
-Deletes lines matching 'cookbook'
-#+END_NOTES
 - 4,15t$
-#+BEGIN_NOTES
-Moves content from lines 4 to 15 to the end of the current file
-#+END_NOTES
 - g/test/m0
-#+BEGIN_NOTES
-Moves the first line matching 'test' to the first line of the current file
-#+END_NOTES
+  #+BEGIN_NOTES
+  Substitutes 'hello' for 'world' in the current line
+
+  Deletes lines matching 'cookbook'
+
+  Moves content from lines 4 to 15 to the end of the current file
+
+  Moves the first line matching 'test' to the first line of the current file
+  #+END_NOTES
 ** Registers
 They basically work as expected. The verb is " (double quote). Some
 examples to illustrate:
@@ -93,7 +90,8 @@ and even edit them (try it with "C-x C-k e").
 ** Leader keys
 - Universal leader key (SPC)
 - Mode-specific leader key (,)
-** Ergonomic
+** Ergonomics
+Every command is triggered with at most 3 keystrokes.
 * much discoverability
 ** Which-key
 #+BEGIN_QUOTE
@@ -101,9 +99,17 @@ Which-key displays the key bindings following your currently entered incomplete 
 #+END_QUOTE
 
 #+ATTR_REVEAL: :frag t
-https://github.com/justbur/emacs-which-key/raw/master/img/which-key-bottom.png
+[[./which-key.png]]
 ** Help screens
-
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag-idx (1 2 3 4)
+- Integrated help screens for every command
+  [[./help-screen-describe-key.png]]
+- Integrated man pages (woman)
+  [[./curl-manpage.png]]
+- Apropos for commands
+  [[./helm-apropos.png]]
+- Various 'describe' commands
+  [[./spacemacs-describes.png]]
 ** Helpful community
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag-idx (1 2 3 4) 
 - [[https://github.com/syl20bnr/spacemacs/][Github]]
@@ -116,7 +122,6 @@ merge), there are lots of quality blog posts and new features are
 being added all the time.
 #+END_NOTES
 * much layers (IDE-style features)
-
 ** What is a layer?
 #+BEGIN_QUOTE
 Layers help collect related packages together to provide features. For
@@ -133,25 +138,29 @@ In other words: preconfigured goodies for your favorite language.
 Two backends for this: [[http://company-mode.github.io/][company]] and [[http://auto-complete.org/][auto-complete]]. Both are good on
 their own right.
 
+#+ATTR_REVEAL: :frag t
+[[./company-semantic.png]]
+
 #+ATTR_REVEAL: :frag (roll-in roll-in) :frag-idx (1 2) 
 - Most modes have no Intellisense!
-  #+BEGIN_NOTES
-  That is, they don't feature context-aware autocompletion. Bummer.
-  #+END_NOTES
 - Some languages (such as Ruby and Python) implement it
-  #+BEGIN_NOTES
-  It's mostly dynamic languages, that basically run a REPL and can
-  provide much better run-time information. Try that in Java or C# -
-  Emacs' Java integration still sucks, despite Eclim and other projects.
-  But, if you're an Emacs user, you're probably better served by
-  lighter-weight languages.
-  #+END_NOTES
 
 #+BEGIN_NOTES
+That is, they don't feature context-aware autocompletion. Bummer.
+
+It's mostly dynamic languages, that basically run a REPL and can
+provide much better run-time information. Try that in Java or C# -
+Emacs' Java integration still sucks, despite Eclim and other projects.
+But, if you're an Emacs user, you're probably better served by
+lighter-weight languages.
+
 I'm biased towards company, but only because it's Spacemacs' default.
 #+END_NOTES
 ** Syntax checking
 [[http://www.flycheck.org/en/latest/][Flycheck]], Emacs' flexible backend for almost every syntax-checking tool.
+
+#+ATTR_REVEAL: :frag t
+[[./flycheck-annotated.png]]
 
 #+ATTR_REVEAL: :frag t
 Basically anything that can output an Emacs-style "backtrace" can be
@@ -161,6 +170,9 @@ hooked into it.
 Text snippets.
 
 #+ATTR_REVEAL: :frag t
+[[./yasnippet.png]]
+
+#+ATTR_REVEAL: :frag t
 It also accepts inline Lisp code (so you can make decisions about how to expand a snippet based on the state of your editor - how cool is that?)
 ** REPL support
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3)
@@ -168,6 +180,17 @@ It also accepts inline Lisp code (so you can make decisions about how to expand 
 - Run commands while editing the file
 - REPLs get Vim-style keybindings for free
 ** MELPA
+From their [[https://melpa.org][website]]:
+
+#+BEGIN_QUOTE
+Up-to-date packages built on our servers from upstream source
+Installable in any Emacs with 'package.el' - no local version-control tools needed
+Curated - no obsolete, renamed, forked or randomly hacked packages
+Comprehensive - more packages than any other archive
+Automatic updates - new commits result in new packages
+Extensible - contribute recipes via github, and we'll build the packages
+#+END_QUOTE
+
 #+BEGIN_NOTES
 Did I mention Emacs has a package manager? After that, all else
 is...forgivable. Before Vimmers start complaining, you have Vundle.
@@ -198,5 +221,4 @@ Benefits:
 [[./magit-diff.png]]
 *** Inline diff!
 [[./magit-inline-diff.png]]
-* such Rails
 * wow (demo time)
