@@ -173,6 +173,7 @@ lighter-weight languages.
 I'm biased towards company, but only because it's Spacemacs' default.
 #+END_NOTES
 ** Syntax checking
+#+ATTR_REVEAL: :frag t
 [[http://www.flycheck.org/en/latest/][Flycheck]], Emacs' flexible backend for almost every syntax-checking tool.
 
 #+ATTR_REVEAL: :frag t
@@ -182,6 +183,7 @@ I'm biased towards company, but only because it's Spacemacs' default.
 Basically anything that can output an Emacs-style "backtrace" can be
 hooked into it.
 ** Code snippets!
+#+ATTR_REVEAL: :frag t
 [[http://joaotavora.github.com/yasnippet/][Yasnippet]], Emacs' backend for code snippets, actually accepts Sublime
 Text snippets.
 
@@ -202,7 +204,35 @@ way to make it fit.
 - REPLs get Vim-style keybindings for free
 ** Obligatory REPL screenshot
 #+ATTR_REVEAL: :frag t
-[[./rails-console-inside-emacs.png]]
+[[./repl-screenshot.png]]
+** Terminals
+#+ATTR_REVEAL: :frag t
+Emacs has its own terminal emulator. Actually, it has (at least) 3. Only the
+ones in the shell layer will be shown here.
+*** multi-term
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in)
+- Runs your favourite shell inside Emacs
+- Works as a normal terminal emulator, with a few caveats
+- PAGER being the most annoying one
+- Multi-term because it allows one to easily switch between multiple instances
+*** 
+[[./ansi-term-correct.png]]
+#+BEGIN_NOTES
+Caveats: $PAGER must be cat, does not work well with more/less
+#+END_NOTES
+*** eshell
+#+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in roll-in)
+- Implemented in pure ELisp (not just an interface to a system shell)
+- Implements its own Lisp-ish versions of GNU userspace
+- Works seamlessly through ssh
+- Also works as an ELisp REPL (there is M-x ielm, though)
+- Hope you remember this movie...
+
+  #+ATTR_REVEAL: :frag t
+  [[./emacs_TRON_detail.JPG]]
+
+  #+ATTR_REVEAL: :frag t
+  (The story about how this happened is [[http://boingboing.net/2011/04/06/how-emacs-got-into-t.html][here]])
 ** MELPA
 #+ATTR_REVEAL: :frag t
 From their [[https://melpa.org][website]]:
@@ -231,6 +261,7 @@ is...forgivable. Before Vimmers start complaining, you have Vundle.
 #+END_NOTES
 * very Git
 ** It's Magit!
+#+ATTR_REVEAL: :frag t
 Thanks to [[https://magit.vc/][Magit]], Spacemacs has one of the best Git clients available.
 
 #+ATTR_REVEAL: :frag t

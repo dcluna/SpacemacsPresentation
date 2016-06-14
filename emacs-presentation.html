@@ -26,7 +26,7 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide"><h1 class="title">Spacemacs: best Rails IDE you've ever seen</h1><h2 class="author">Daniel Luna</h2><p class="date">Created: 2016-06-12 Sun 23:48</p>
+<section id="sec-title-slide"><h1 class="title">Spacemacs: best Rails IDE you've ever seen</h1><h2 class="author">Daniel Luna</h2><p class="date">Created: 2016-06-13 Mon 20:58</p>
 </section>
 <section>
 <section id="slide-orgheadline6">
@@ -285,9 +285,9 @@ being added all the time.
 </section>
 </section>
 <section>
-<section id="slide-orgheadline30">
-<h2 id="orgheadline30">much layers (IDE-style features)</h2>
-<div class="outline-text-2" id="text-orgheadline30">
+<section id="slide-orgheadline34">
+<h2 id="orgheadline34">much layers (IDE-style features)</h2>
+<div class="outline-text-2" id="text-orgheadline34">
 </div></section>
 <section id="slide-orgheadline23">
 <h3 id="orgheadline23">What is a layer?</h3>
@@ -346,8 +346,8 @@ I'm biased towards company, but only because it's Spacemacs' default.
 </section>
 <section id="slide-orgheadline25">
 <h3 id="orgheadline25">Syntax checking</h3>
-<p>
-<a href="http://www.flycheck.org/en/latest/">Flycheck</a>, Emacs' flexible backend for almost every syntax-checking tool.
+<p class="fragment">
+<a href="http://www.flycheck.org/en/latest/" class="fragment">Flycheck</a>, Emacs' flexible backend for almost every syntax-checking tool.
 </p>
 
 
@@ -363,8 +363,8 @@ hooked into it.
 </section>
 <section id="slide-orgheadline26">
 <h3 id="orgheadline26">Code snippets!</h3>
-<p>
-<a href="http://joaotavora.github.com/yasnippet/">Yasnippet</a>, Emacs' backend for code snippets, actually accepts Sublime
+<p class="fragment">
+<a href="http://joaotavora.github.com/yasnippet/" class="fragment">Yasnippet</a>, Emacs' backend for code snippets, actually accepts Sublime
 Text snippets.
 </p>
 
@@ -399,12 +399,66 @@ way to make it fit.
 <h3 id="orgheadline28">Obligatory REPL screenshot</h3>
 
 <div class="figure">
-<p><img src="./rails-console-inside-emacs.png" alt="rails-console-inside-emacs.png" class="fragment" />
+<p><img src="./repl-screenshot.png" alt="repl-screenshot.png" class="fragment" />
 </p>
 </div>
 </section>
+<section id="slide-orgheadline32">
+<h3 id="orgheadline32">Terminals</h3>
+<p class="fragment">
+Emacs has its own terminal emulator. Actually, it has (at least) 3. Only the
+ones in the shell layer will be shown here.
+</p>
+</section>
 <section id="slide-orgheadline29">
-<h3 id="orgheadline29">MELPA</h3>
+<h4 id="orgheadline29">multi-term</h4>
+<ul>
+<li class="fragment roll-in">Runs your favourite shell inside Emacs</li>
+<li class="fragment roll-in">Works as a normal terminal emulator, with a few caveats</li>
+<li class="fragment roll-in">PAGER being the most annoying one</li>
+<li class="fragment roll-in">Multi-term because it allows one to easily switch between multiple instances</li>
+
+</ul>
+</section>
+<section id="slide-orgheadline30">
+<h4 id="orgheadline30"></h4>
+
+<div class="figure">
+<p><img src="./ansi-term-correct.png" alt="ansi-term-correct.png" />
+</p>
+</div>
+<aside class="notes">
+<p>
+Caveats: $PAGER must be cat, does not work well with more/less
+</p>
+
+</aside>
+</section>
+<section id="slide-orgheadline31">
+<h4 id="orgheadline31">eshell</h4>
+<ul>
+<li class="fragment roll-in">Implemented in pure ELisp (not just an interface to a system shell)</li>
+<li class="fragment roll-in">Implements its own Lisp-ish versions of GNU userspace</li>
+<li class="fragment roll-in">Works seamlessly through ssh</li>
+<li class="fragment roll-in">Also works as an ELisp REPL (there is M-x ielm, though)</li>
+<li class="fragment roll-in"><p>
+Hope you remember this movie&#x2026;
+</p>
+
+
+<div class="figure">
+<p><img src="./emacs_TRON_detail.JPG" alt="emacs_TRON_detail.JPG" class="fragment" />
+</p>
+</div>
+
+<p class="fragment">
+(The story about how this happened is <a href="http://boingboing.net/2011/04/06/how-emacs-got-into-t.html" class="fragment">here</a>)
+</p></li>
+
+</ul>
+</section>
+<section id="slide-orgheadline33">
+<h3 id="orgheadline33">MELPA</h3>
 <p class="fragment">
 From their <a href="https://melpa.org/" class="fragment">website</a>:
 </p>
@@ -449,14 +503,14 @@ is&#x2026;forgivable. Before Vimmers start complaining, you have Vundle.
 </section>
 </section>
 <section>
-<section id="slide-orgheadline39">
-<h2 id="orgheadline39">very Git</h2>
-<div class="outline-text-2" id="text-orgheadline39">
+<section id="slide-orgheadline43">
+<h2 id="orgheadline43">very Git</h2>
+<div class="outline-text-2" id="text-orgheadline43">
 </div></section>
-<section id="slide-orgheadline31">
-<h3 id="orgheadline31">It's Magit!</h3>
-<p>
-Thanks to <a href="https://magit.vc/">Magit</a>, Spacemacs has one of the best Git clients available.
+<section id="slide-orgheadline35">
+<h3 id="orgheadline35">It's Magit!</h3>
+<p class="fragment">
+Thanks to <a href="https://magit.vc/" class="fragment">Magit</a>, Spacemacs has one of the best Git clients available.
 </p>
 
 <p class="fragment">
@@ -477,56 +531,56 @@ It makes git look easy&#x2026;almost.
 
 </ul>
 </section>
-<section id="slide-orgheadline32">
-<h3 id="orgheadline32">Status buffer</h3>
+<section id="slide-orgheadline36">
+<h3 id="orgheadline36">Status buffer</h3>
 
 <div class="figure">
 <p><img src="./magit-status.png" alt="magit-status.png" />
 </p>
 </div>
 </section>
-<section id="slide-orgheadline33">
-<h3 id="orgheadline33">Log</h3>
+<section id="slide-orgheadline37">
+<h3 id="orgheadline37">Log</h3>
 
 <div class="figure">
 <p><img src="./magit-log.png" alt="magit-log.png" />
 </p>
 </div>
 </section>
-<section id="slide-orgheadline34">
-<h3 id="orgheadline34">Rebase</h3>
+<section id="slide-orgheadline38">
+<h3 id="orgheadline38">Rebase</h3>
 
 <div class="figure">
 <p><img src="./magit-rebase.png" alt="magit-rebase.png" />
 </p>
 </div>
 </section>
-<section id="slide-orgheadline35">
-<h3 id="orgheadline35">Discoverable</h3>
+<section id="slide-orgheadline39">
+<h3 id="orgheadline39">Discoverable</h3>
 
 <div class="figure">
 <p><img src="./magit-discoverable.png" alt="magit-discoverable.png" />
 </p>
 </div>
 </section>
-<section id="slide-orgheadline37">
-<h3 id="orgheadline37">Diff</h3>
+<section id="slide-orgheadline41">
+<h3 id="orgheadline41">Diff</h3>
 
 <div class="figure">
 <p><img src="./magit-diff.png" alt="magit-diff.png" />
 </p>
 </div>
 </section>
-<section id="slide-orgheadline36">
-<h4 id="orgheadline36">Inline diff!</h4>
+<section id="slide-orgheadline40">
+<h4 id="orgheadline40">Inline diff!</h4>
 
 <div class="figure">
 <p><img src="./magit-inline-diff.png" alt="magit-inline-diff.png" />
 </p>
 </div>
 </section>
-<section id="slide-orgheadline38">
-<h3 id="orgheadline38">git-timemachine</h3>
+<section id="slide-orgheadline42">
+<h3 id="orgheadline42">git-timemachine</h3>
 <p class="fragment">
 Step through historic versions of git controlled file using everyone's favourite editor
 </p>
@@ -546,8 +600,8 @@ TODO: make this fit inside the slide
 </section>
 </section>
 <section>
-<section id="slide-orgheadline40">
-<h2 id="orgheadline40">fun fact</h2>
+<section id="slide-orgheadline44">
+<h2 id="orgheadline44">fun fact</h2>
 <ul>
 <li class="fragment roll-in">This presentation was made with Emacs' awesome <a href="http://orgmode.org/">Org-mode</a>.</li>
 <li class="fragment roll-in">Don't believe it? Look at the <a href="https://raw.githubusercontent.com/dcluna/SpacemacsPresentation/master/emacs-presentation.org">source</a>.</li>
@@ -557,8 +611,8 @@ TODO: make this fit inside the slide
 </section>
 </section>
 <section>
-<section id="slide-orgheadline41">
-<h2 id="orgheadline41">wow</h2>
+<section id="slide-orgheadline45">
+<h2 id="orgheadline45">wow</h2>
 
 <div class="figure">
 <p><img src="./momacs.png" alt="momacs.png" class="fragment" />
