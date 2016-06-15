@@ -26,7 +26,7 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide"><h1 class="title">Spacemacs: best Rails IDE you've ever seen</h1><h2 class="author">Daniel Luna</h2><p class="date">Created: 2016-06-13 Mon 20:58</p>
+<section id="sec-title-slide"><h1 class="title">Spacemacs: best Rails IDE you've ever seen</h1><h2 class="author">Daniel Luna</h2><p class="date">Created: 2016-06-14 Tue 22:03</p>
 </section>
 <section>
 <section id="slide-orgheadline6">
@@ -51,12 +51,13 @@
 <h4 id="orgheadline2">First things first</h4>
 
 <div class="figure">
-<p><img src="./dogemacs.png" alt="dogemacs.png" width="100%" />
+<p><img src="./dogemacs.png" alt="dogemacs.png" width="100%" height="700px" />
 </p>
 </div>
 <aside class="notes">
 <p>
-TODO: Make this fit inside the current slide!
+Not every editor greets you with Shiba Inu and its profound,
+self-referential poetic musings.
 </p>
 
 </aside>
@@ -80,6 +81,29 @@ Just clone it, launch it, then press the space bar to explore the interactive li
 Spacemacs can be used naturally by both Emacs and Vim users &#x2013; you can even mix the two editing styles. Switching easily between input styles makes Spacemacs a great tool for pair-programming.
 </p>
 </blockquote>
+
+<aside class="notes">
+<p>
+For those of you who think these claims are too grandiloquent, I hope
+to convince you otherwise by the end of this presentation.
+</p>
+
+<p>
+Mixing between both has spoiled me a bit - I'm a longtime Emacs user
+who recently described the joy of modal editing, and now I want this
+everywhere - Normal-mode navigation and Emacs-style shortcuts while
+in Insert-mode.
+</p>
+
+<p>
+The point about pair programming is a biggie. Emacs can be launched
+directly from the command line, and that makes it a great candidate for
+pair programming via free tools such as tmate. Also, it caters to
+Greeks and Trojans - so almost everyone will know how to navigate
+around with one or the other.
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline5">
 <h3 id="orgheadline5">Why should I care?</h3>
@@ -97,6 +121,23 @@ the best development environment.
 It can be used by both Vim and Emacs users - so if you think Emacs "is
 a good OS, just lacking a decent editor", think again.
 </p>
+
+<aside class="notes">
+<p>
+I'm basically rephrasing the quote in the previous slide, but the
+point I'm trying to make is: this is Good Stuff™.
+</p>
+
+<p>
+You know that joke about Emacs giving users carpal tunnel syndrome? I
+used to type a lot when I was a C# programmer, and eventually it took
+its toll on my hands (it was Visual Studio, so no blame on Emacs here,
+even though I agree its keybindings could be more ergonomic).
+I looked into modal editing and eventually into Spacemacs because of
+that, and haven't looked back ever since.
+</p>
+
+</aside>
 </section>
 </section>
 <section>
@@ -119,6 +160,16 @@ Emacs keybindings' are setup per-mode, so to make it work seamlessly
 across all modes (even very customized ones, such as Org-mode and Magit) is
 harder than it looks.
 </p>
+
+<aside class="notes">
+<p>
+Not trying to brag about how much of a feat of programming is to make
+a Vi clone, but implement its emulator in another editor? Well, that's
+a bit different. Hats off to Emacs, for its almost infinite
+extensibility, and to Vi, for being such a pleasure to type code in.
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline8">
 <h3 id="orgheadline8">Vim "language" works, and is extensible</h3>
@@ -128,6 +179,22 @@ harder than it looks.
 <li class="fragment roll-in">Bonus: you can define your own, if you know enough Emacs Lisp (even the "original" operators are defined like this)</li>
 
 </ul>
+
+<aside class="notes">
+<p>
+If you don't know what I'm talking about when I mention 'Vim language'
+(and it's not VimScript), I encourage you to look at the famous SO
+<a href="http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118">post</a> "Your problem with Vim is that you don't grok vi".
+</p>
+
+<p>
+I wouldn't be too happy about defining a new operator, though - its
+internals aren't exactly very readable, IMHO. Although I think with
+aid from the macrostep package, it'll be much more pleasant than
+reading Vi source.
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline9">
 <h3 id="orgheadline9">Ex commands</h3>
@@ -170,11 +237,26 @@ They basically work as expected. The verb is " (double quote). Some
 examples to illustrate:
 </p>
 <ul>
-<li class="fragment roll-in">"ay$ (overwrite register 'r' with contents from point to the end of the line)</li>
-<li class="fragment roll-in">"A2dd (append to register 'a' the contents of the next two lines and delete them)</li>
-<li class="fragment roll-in">qb &lt;some commands here&gt; (see next section&#x2026;)</li>
+<li class="fragment roll-in">"ay$</li>
+<li class="fragment roll-in">"A2dd</li>
+<li class="fragment roll-in">qb &lt;some commands here&gt;</li>
 
 </ul>
+
+<aside class="notes">
+<p>
+overwrite register 'r' with contents from point to the end of the line
+</p>
+
+<p>
+append to register 'a' the contents of the next two lines and delete them
+</p>
+
+<p>
+see next section&#x2026;
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline11">
 <h3 id="orgheadline11">Keyboard macros</h3>
@@ -184,10 +266,29 @@ The 'q' verb is used for saving keyboard macros.
 
 <ul>
 <li class="fragment roll-in">Can be saved to registers</li>
-<li class="fragment roll-in">Can be edited ("C-x C-k e")
-<img src="./keyboard-macro-editor.png" alt="keyboard-macro-editor.png" /></li>
+<li class="fragment roll-in"><p>
+Can be edited ("C-x C-k e")
+</p>
+
+<div class="figure">
+<p><img src="./keyboard-macro-editor.png" alt="keyboard-macro-editor.png" width="80%" height="550px" />
+</p>
+</div></li>
 
 </ul>
+
+<aside class="notes">
+<p>
+Not only can be edited, but also can be saved and re-used as ELisp
+functions. Crazy, and really cool. There was some talk in an Emacs
+forum about going all the way and substituting key sequences for
+internal calls - I'm not sure how difficult that would be, but man,
+it'd be like compiling keyboard macros into actual code. How many
+tools you know that can do that? Honest question. I can think of
+Excel, maybe.
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline12">
 <h3 id="orgheadline12">Leader keys</h3>
@@ -196,6 +297,19 @@ The 'q' verb is used for saving keyboard macros.
 <li class="fragment roll-in">Mode-specific leader key (,)</li>
 
 </ul>
+
+<aside class="notes">
+<p>
+No pretty pictures here because I was a bit tired when I made this slide.
+</p>
+
+<p>
+The leader key being bound to Space is important - the space key is
+the biggest in the keyboard, so this means that almost every finger
+can touch it. Does wonders for ergonomics.
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline13">
 <h3 id="orgheadline13">Ergonomics</h3>
@@ -208,6 +322,19 @@ Summary:
 <li class="fragment roll-in">Emacs = "Escape Meta Alt Control Shift"? Not anymore.</li>
 
 </ul>
+
+<aside class="notes">
+<p>
+The thing about 3 keystrokes is really, reeeeeeeally important -
+Emacs' shortcuts are usually bad at this.
+</p>
+
+<p>
+Heard the joke in the last one about trying to type in your
+name with these modifiers and seeing what Emacs would run?
+</p>
+
+</aside>
 </section>
 </section>
 <section>
@@ -228,6 +355,22 @@ Which-key displays the key bindings following your currently entered incomplete 
 <p><img src="./which-key.png" alt="which-key.png" class="fragment" />
 </p>
 </div>
+
+<aside class="notes">
+<p>
+Most programs assume that no user will ever master all shortcuts.
+Spacemacs not only provides a good set of mnemonic shortcuts, but it
+also helps you internalize them, and discover new ones!
+</p>
+
+<p>
+The 'prefix' notes are due to Emacs' internal implementation of
+multiple shortcuts under the same key prefix, and are slowly being
+updated with Spacemacs' implementation, that sets a useful label
+there.
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline20">
 <h3 id="orgheadline20">Help screens</h3>
@@ -237,33 +380,72 @@ Which-key displays the key bindings following your currently entered incomplete 
 <h4 id="orgheadline16">Integrated help screens for every command</h4>
 
 <div class="figure">
-<p><img src="./help-screen-describe-key.png" alt="help-screen-describe-key.png" />
+<p><img src="./help-screen-describe-key.png" alt="help-screen-describe-key.png" class="fragment" />
 </p>
 </div>
+
+<aside class="notes">
+<p>
+This is help for Emacs' internal commands and shortcuts. Given that
+everything in Emacs is implemented as an internal command, this means
+that you can ask it about itself, and it will have a sensible answer.
+This is RDoc/Haddock taken to the next level.
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline17">
 <h4 id="orgheadline17">Integrated man pages (woman)</h4>
 
 <div class="figure">
-<p><img src="./curl-manpage.png" alt="curl-manpage.png" />
+<p><img src="./curl-manpage.png" alt="curl-manpage.png" class="fragment" width="100%" height="700px" />
 </p>
 </div>
+
+<aside class="notes">
+<p>
+This is a command for reading man pages inside Emacs. Given that
+default implementations of man just pipe the contents into less/more,
+this is much better because it allows one to do everything Emacs can
+do to a buffer - especially the part about searching inside it, I find
+invaluable.
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline18">
 <h4 id="orgheadline18">Apropos for commands</h4>
 
 <div class="figure">
-<p><img src="./helm-apropos.png" alt="helm-apropos.png" />
+<p><img src="./helm-apropos.png" alt="helm-apropos.png" class="fragment" />
 </p>
 </div>
+
+<aside class="notes">
+<p>
+This is apropos inside Emacs. You can query it for Emacs' internal
+commands or just type in something and see what Emacs gives back to
+you. Also useful.
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline19">
 <h4 id="orgheadline19">Various 'describe' commands</h4>
 
 <div class="figure">
-<p><img src="./spacemacs-describes.png" alt="spacemacs-describes.png" />
+<p><img src="./spacemacs-describes.png" alt="spacemacs-describes.png" class="fragment" />
 </p>
 </div>
+
+<aside class="notes">
+<p>
+A few commands I won't go into detail, but they do have their place.
+Describe-key is particularly useful to know about the internal
+implementation of a keyboard shortcut.
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline21">
 <h3 id="orgheadline21">Helpful community</h3>
@@ -274,6 +456,7 @@ Which-key displays the key bindings following your currently entered incomplete 
 <li class="fragment roll-in">Blog posts</li>
 
 </ul>
+
 <aside class="notes">
 <p>
 Spacemacs devs' are usually responsive to PRs (albeit somewhat slow to
@@ -305,6 +488,15 @@ them from having to think about what packages to install
 In other words: preconfigured goodies for your favorite language.
 </p>
 
+<aside class="notes">
+<p>
+It does allow one some degree of flexibility, though. You can opt out
+of any package any time, and replace it by your own preferences if you
+know enough ELisp. So it's not something "set in stone" - just sane
+defaults, really (so sane that I almost never change them).
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline24">
 <h3 id="orgheadline24">Auto-completion</h3>
@@ -342,6 +534,12 @@ lighter-weight languages.
 I'm biased towards company, but only because it's Spacemacs' default.
 </p>
 
+<p>
+I'd mention something about SLIME, (Superior Lisp Interaction Mode for
+Emacs), but I'd better leave this for a presentation about Lisp-like
+languages.
+</p>
+
 </aside>
 </section>
 <section id="slide-orgheadline25">
@@ -360,6 +558,14 @@ I'm biased towards company, but only because it's Spacemacs' default.
 Basically anything that can output an Emacs-style "backtrace" can be
 hooked into it.
 </p>
+
+<aside class="notes">
+<p>
+So, despite claims of Emacs being the kitchen-sink editor, it is
+actually very modular and follows the Unix philosophy in this regard.
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline26">
 <h3 id="orgheadline26">Code snippets!</h3>
@@ -380,8 +586,9 @@ It also accepts inline Lisp code (so you can make decisions about how to expand 
 
 <aside class="notes">
 <p>
-TODO: make this last line be displayed inside the current slide! There must be a
-way to make it fit.
+The thing about inline Lisp code is used in Rails' snippets, btw -
+it knows where I am when I create a new concern/model/whatever, so it
+generates a skeleton accordingly. Very cool indeed.
 </p>
 
 </aside>
@@ -394,6 +601,15 @@ way to make it fit.
 <li class="fragment roll-in">REPLs get Vim-style keybindings for free</li>
 
 </ul>
+
+<aside class="notes">
+<p>
+The benefit of running a REPL inside the editor cannot be overstated -
+you basically remove all the turnaround time in the edit-compile-run
+cycle to the speed of your neurons and fingers.
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline28">
 <h3 id="orgheadline28">Obligatory REPL screenshot</h3>
@@ -402,6 +618,16 @@ way to make it fit.
 <p><img src="./repl-screenshot.png" alt="repl-screenshot.png" class="fragment" />
 </p>
 </div>
+
+<aside class="notes">
+<p>
+Please DON'T ask me about the obfuscated JAPH/JARH at the end. I made
+it during one of my (many) sleepless nights and can't really remember
+every step I took until I made it look like this. Does it look cool /
+hacker / l33t / whatever? 
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline32">
 <h3 id="orgheadline32">Terminals</h3>
@@ -419,6 +645,12 @@ ones in the shell layer will be shown here.
 <li class="fragment roll-in">Multi-term because it allows one to easily switch between multiple instances</li>
 
 </ul>
+<aside class="notes">
+<p>
+Caveats: $PAGER must be cat, does not work well with more/less
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline30">
 <h4 id="orgheadline30"></h4>
@@ -427,9 +659,18 @@ ones in the shell layer will be shown here.
 <p><img src="./ansi-term-correct.png" alt="ansi-term-correct.png" />
 </p>
 </div>
+
+<ul class="fragment">
+<li>DON'T TRY TO RUN VI IN THIS!</li>
+
+</ul>
 <aside class="notes">
 <p>
-Caveats: $PAGER must be cat, does not work well with more/less
+The thing about 'no vi keybindings' is because I use vi-style
+shortcuts in zsh. Cthulhu is going to eat your sweetest dreams. Or
+it'll just do weird stuff because Emacs won't know exactly the difference
+between what it should interpret as a command and what should be
+directed to Vi.
 </p>
 
 </aside>
@@ -456,6 +697,17 @@ Hope you remember this movie&#x2026;
 </p></li>
 
 </ul>
+
+<aside class="notes">
+<p>
+I haven't seen the original, just the remake - and I'm not really sure
+which one of these this screenshot comes from. I think it's from the
+second one, scene he's in the arcade or something. But yeah, much
+better showing some actual hacking than 'the firewall is encrypted, I
+need more time, I need more time!'
+</p>
+
+</aside>
 </section>
 <section id="slide-orgheadline33">
 <h3 id="orgheadline33">MELPA</h3>
@@ -493,6 +745,14 @@ Extensible - contribute recipes via github, and we'll build the packages
 Yeah, Emacs has its own apt-get/yum/emerge/whatever.
 </p>
 
+<p class="fragment">
+It goes a step further by working just like Vundle and deleting unused packages.
+</p>
+
+<p class="fragment">
+It also accepts Github packages! Gentoo-level bleeding edge.
+</p>
+
 <aside class="notes">
 <p>
 Did I mention Emacs has a package manager? After that, all else
@@ -503,9 +763,9 @@ is&#x2026;forgivable. Before Vimmers start complaining, you have Vundle.
 </section>
 </section>
 <section>
-<section id="slide-orgheadline43">
-<h2 id="orgheadline43">very Git</h2>
-<div class="outline-text-2" id="text-orgheadline43">
+<section id="slide-orgheadline44">
+<h2 id="orgheadline44">very Git</h2>
+<div class="outline-text-2" id="text-orgheadline44">
 </div></section>
 <section id="slide-orgheadline35">
 <h3 id="orgheadline35">It's Magit!</h3>
@@ -526,8 +786,8 @@ Discoverable interface
 <p>
 It makes git look easy&#x2026;almost.
 </p></li>
-<li class="fragment roll-in">git-link</li>
 <li class="fragment roll-in">git-timemachine</li>
+<li class="fragment roll-in">git-link</li>
 
 </ul>
 </section>
@@ -535,7 +795,7 @@ It makes git look easy&#x2026;almost.
 <h3 id="orgheadline36">Status buffer</h3>
 
 <div class="figure">
-<p><img src="./magit-status.png" alt="magit-status.png" />
+<p><img src="./magit-status.png" alt="magit-status.png" class="fragment" />
 </p>
 </div>
 </section>
@@ -543,7 +803,7 @@ It makes git look easy&#x2026;almost.
 <h3 id="orgheadline37">Log</h3>
 
 <div class="figure">
-<p><img src="./magit-log.png" alt="magit-log.png" />
+<p><img src="./magit-log.png" alt="magit-log.png" class="fragment" height="700px" />
 </p>
 </div>
 </section>
@@ -551,7 +811,7 @@ It makes git look easy&#x2026;almost.
 <h3 id="orgheadline38">Rebase</h3>
 
 <div class="figure">
-<p><img src="./magit-rebase.png" alt="magit-rebase.png" />
+<p><img src="./magit-rebase.png" alt="magit-rebase.png" class="fragment" />
 </p>
 </div>
 </section>
@@ -559,7 +819,7 @@ It makes git look easy&#x2026;almost.
 <h3 id="orgheadline39">Discoverable</h3>
 
 <div class="figure">
-<p><img src="./magit-discoverable.png" alt="magit-discoverable.png" />
+<p><img src="./magit-discoverable.png" alt="magit-discoverable.png" class="fragment" height="700px" />
 </p>
 </div>
 </section>
@@ -567,7 +827,7 @@ It makes git look easy&#x2026;almost.
 <h3 id="orgheadline41">Diff</h3>
 
 <div class="figure">
-<p><img src="./magit-diff.png" alt="magit-diff.png" />
+<p><img src="./magit-diff.png" alt="magit-diff.png" class="fragment" />
 </p>
 </div>
 </section>
@@ -575,7 +835,7 @@ It makes git look easy&#x2026;almost.
 <h4 id="orgheadline40">Inline diff!</h4>
 
 <div class="figure">
-<p><img src="./magit-inline-diff.png" alt="magit-inline-diff.png" />
+<p><img src="./magit-inline-diff.png" alt="magit-inline-diff.png" class="fragment" />
 </p>
 </div>
 </section>
@@ -593,31 +853,64 @@ Step through historic versions of git controlled file using everyone's favourite
 
 <aside class="notes">
 <p>
-TODO: make this fit inside the slide
+Workflow here is great, I use it all the time. See a revision I want
+to get back to? Flip around the file I want to investigate, just
+review it, if necessary I'll copy the commit hash with 'Y' and
+checkout with "SPC g uppercase c". It's so easy, it would make H.G.
+Wells proud.
+</p>
+
+</aside>
+</section>
+<section id="slide-orgheadline43">
+<h3 id="orgheadline43">git-link</h3>
+<p class="fragment">
+From the project website:
+</p>
+
+<blockquote  class="fragment roll-in">
+<p>
+Interactive Emacs functions that create URLs for files and commits in GitHub/Bitbucket/GitLab/&#x2026; repositories.
+</p>
+</blockquote>
+
+<ul class="fragment">
+<li>Spacemacs' integration makes git-link work seamlessly with git-timemachine</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+So you will actually link to the current revision's commit, instead of
+linking directly to the branch. This behavior is only present in
+Spacemacs, AFAIK. 
 </p>
 
 </aside>
 </section>
 </section>
 <section>
-<section id="slide-orgheadline44">
-<h2 id="orgheadline44">fun fact</h2>
+<section id="slide-orgheadline45">
+<h2 id="orgheadline45">fun fact</h2>
 <ul>
 <li class="fragment roll-in">This presentation was made with Emacs' awesome <a href="http://orgmode.org/">Org-mode</a>.</li>
-<li class="fragment roll-in">Don't believe it? Look at the <a href="https://raw.githubusercontent.com/dcluna/SpacemacsPresentation/master/emacs-presentation.org">source</a>.</li>
-<li class="fragment roll-in"><img src="./spacemacs-presentation-source.png" alt="spacemacs-presentation-source.png" /></li>
+<li class="fragment roll-in">Don't believe it? Look at the <a href="https://raw.githubusercontent.com/dcluna/SpacemacsPresentation/master/emacs-presentation.org">source</a>.
+<img src="./spacemacs-presentation-source.png" alt="spacemacs-presentation-source.png" /></li>
 
 </ul>
 </section>
 </section>
 <section>
-<section id="slide-orgheadline45">
-<h2 id="orgheadline45">wow</h2>
+<section id="slide-orgheadline46">
+<h2 id="orgheadline46">wow</h2>
 
 <div class="figure">
 <p><img src="./momacs.png" alt="momacs.png" class="fragment" />
 </p>
 </div>
+<p class="fragment">
+Demo time?
+</p>
 </section>
 </section>
 </div>
@@ -641,8 +934,8 @@ overview: true,
 width: 1200,
 height: 800,
 margin: 0.00,
-minScale: 0.50,
-maxScale: 2.00,
+minScale: 0.10,
+maxScale: 1.00,
 
 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none

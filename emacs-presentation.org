@@ -3,8 +3,8 @@
 #+OPTIONS: reveal_width:1200 reveal_height:800
 #+OPTIONS: toc:nil
 #+REVEAL_MARGIN: 0.0
-#+REVEAL_MIN_SCALE: 0.5
-#+REVEAL_MAX_SCALE: 2.0
+#+REVEAL_MIN_SCALE: 0.1
+#+REVEAL_MAX_SCALE: 1.0
 #+REVEAL_TRANS: none
 #+REVEAL_THEME: night
 #+REVEAL_HLEVEL: 1
@@ -20,10 +20,11 @@
 - "Last Lisp Machine"
 ** What is Spacemacs?
 *** First things first
-#+ATTR_HTML: :width 100%
+#+ATTR_HTML: :width 100% :height 700px
 [[./dogemacs.png]]
 #+BEGIN_NOTES
-TODO: Make this fit inside the current slide!
+Not every editor greets you with Shiba Inu and its profound,
+self-referential poetic musings.
 #+END_NOTES
 *** Really, what is Spacemacs?
 #+ATTR_REVEAL: :frag t
@@ -37,6 +38,22 @@ Just clone it, launch it, then press the space bar to explore the interactive li
 
 Spacemacs can be used naturally by both Emacs and Vim users -- you can even mix the two editing styles. Switching easily between input styles makes Spacemacs a great tool for pair-programming.
 #+END_QUOTE
+
+#+BEGIN_NOTES
+For those of you who think these claims are too grandiloquent, I hope
+to convince you otherwise by the end of this presentation.
+
+Mixing between both has spoiled me a bit - I'm a longtime Emacs user
+who recently described the joy of modal editing, and now I want this
+everywhere - Normal-mode navigation and Emacs-style shortcuts while
+in Insert-mode.
+
+The point about pair programming is a biggie. Emacs can be launched
+directly from the command line, and that makes it a great candidate for
+pair programming via free tools such as tmate. Also, it caters to
+Greeks and Trojans - so almost everyone will know how to navigate
+around with one or the other.
+#+END_NOTES
 ** Why should I care?
 #+ATTR_REVEAL: :frag t
 It comes with a lot of integrated goodies to help with development.
@@ -49,6 +66,18 @@ the best development environment.
 #+ATTR_REVEAL: :frag t
 It can be used by both Vim and Emacs users - so if you think Emacs "is
 a good OS, just lacking a decent editor", think again.
+
+#+BEGIN_NOTES
+I'm basically rephrasing the quote in the previous slide, but the
+point I'm trying to make is: this is Good Stuff™.
+
+You know that joke about Emacs giving users carpal tunnel syndrome? I
+used to type a lot when I was a C# programmer, and eventually it took
+its toll on my hands (it was Visual Studio, so no blame on Emacs here,
+even though I agree its keybindings could be more ergonomic).
+I looked into modal editing and eventually into Spacemacs because of
+that, and haven't looked back ever since.
+#+END_NOTES
 * so Vim
 ** Ubiquitous hjkl movement
 #+ATTR_REVEAL: :frag t
@@ -61,11 +90,29 @@ Not only that, but almost all Vim commands work as expected.
 Emacs keybindings' are setup per-mode, so to make it work seamlessly
 across all modes (even very customized ones, such as Org-mode and Magit) is
 harder than it looks.
+
+#+BEGIN_NOTES
+Not trying to brag about how much of a feat of programming is to make
+a Vi clone, but implement its emulator in another editor? Well, that's
+a bit different. Hats off to Emacs, for its almost infinite
+extensibility, and to Vi, for being such a pleasure to type code in.
+#+END_NOTES
 ** Vim "language" works, and is extensible
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3)
 - Verbs (a, i, o, y, p, c, d, >, <)
 - Movement keys (f, t, /, ?, *, #, %)
 - Bonus: you can define your own, if you know enough Emacs Lisp (even the "original" operators are defined like this)
+
+#+BEGIN_NOTES
+If you don't know what I'm talking about when I mention 'Vim language'
+(and it's not VimScript), I encourage you to look at the famous SO
+[[http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118][post]] "Your problem with Vim is that you don't grok vi".
+
+I wouldn't be too happy about defining a new operator, though - its
+internals aren't exactly very readable, IMHO. Although I think with
+aid from the macrostep package, it'll be much more pleasant than
+reading Vi source.
+#+END_NOTES
 ** Ex commands
 Some cookbook examples:
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag-idx (1 2 3 4)
@@ -87,26 +134,61 @@ Some cookbook examples:
 They basically work as expected. The verb is " (double quote). Some
 examples to illustrate:
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3)
-- "ay$ (overwrite register 'r' with contents from point to the end of the line)
-- "A2dd (append to register 'a' the contents of the next two lines and delete them)
-- qb <some commands here> (see next section...)
+- "ay$ 
+- "A2dd 
+- qb <some commands here> 
+
+#+BEGIN_NOTES
+overwrite register 'r' with contents from point to the end of the line
+
+append to register 'a' the contents of the next two lines and delete them
+
+see next section...
+#+END_NOTES
 ** Keyboard macros
 The 'q' verb is used for saving keyboard macros.
 
 #+ATTR_REVEAL: :frag (roll-in roll-in) :frag-idx (1 2) 
 - Can be saved to registers
 - Can be edited ("C-x C-k e")
+  #+ATTR_HTML: :width 80% :height 550px
   [[./keyboard-macro-editor.png]]
+  
+#+BEGIN_NOTES
+Not only can be edited, but also can be saved and re-used as ELisp
+functions. Crazy, and really cool. There was some talk in an Emacs
+forum about going all the way and substituting key sequences for
+internal calls - I'm not sure how difficult that would be, but man,
+it'd be like compiling keyboard macros into actual code. How many
+tools you know that can do that? Honest question. I can think of
+Excel, maybe.
+#+END_NOTES
 ** Leader keys
 #+ATTR_REVEAL: :frag (roll-in roll-in) :frag-idx (1 2)
 - Universal leader key (SPC)
 - Mode-specific leader key (,)
+
+#+BEGIN_NOTES
+No pretty pictures here because I was a bit tired when I made this slide.
+
+The leader key being bound to Space is important - the space key is
+the biggest in the keyboard, so this means that almost every finger
+can touch it. Does wonders for ergonomics.
+#+END_NOTES
 ** Ergonomics
 Summary:
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3)
 - Vim keybindings everywhere
 - Every command is triggered with at most 3 keystrokes.
 - Emacs = "Escape Meta Alt Control Shift"? Not anymore.
+
+#+BEGIN_NOTES
+The thing about 3 keystrokes is really, reeeeeeeally important -
+Emacs' shortcuts are usually bad at this.
+
+Heard the joke in the last one about trying to type in your
+name with these modifiers and seeing what Emacs would run?
+#+END_NOTES
 * much discoverability
 ** Which-key
 #+ATTR_REVEAL: :frag t
@@ -116,21 +198,65 @@ Which-key displays the key bindings following your currently entered incomplete 
 
 #+ATTR_REVEAL: :frag t
 [[./which-key.png]]
+
+#+BEGIN_NOTES
+Most programs assume that no user will ever master all shortcuts.
+Spacemacs not only provides a good set of mnemonic shortcuts, but it
+also helps you internalize them, and discover new ones!
+
+The 'prefix' notes are due to Emacs' internal implementation of
+multiple shortcuts under the same key prefix, and are slowly being
+updated with Spacemacs' implementation, that sets a useful label
+there.
+#+END_NOTES
 ** Help screens
 *** Integrated help screens for every command
+  #+ATTR_REVEAL: :frag t
   [[./help-screen-describe-key.png]]
+
+#+BEGIN_NOTES
+This is help for Emacs' internal commands and shortcuts. Given that
+everything in Emacs is implemented as an internal command, this means
+that you can ask it about itself, and it will have a sensible answer.
+This is RDoc/Haddock taken to the next level.
+#+END_NOTES
 *** Integrated man pages (woman)
+  #+ATTR_REVEAL: :frag t
+  #+ATTR_HTML: :width 100% :height 700px
   [[./curl-manpage.png]]
+  
+#+BEGIN_NOTES
+This is a command for reading man pages inside Emacs. Given that
+default implementations of man just pipe the contents into less/more,
+this is much better because it allows one to do everything Emacs can
+do to a buffer - especially the part about searching inside it, I find
+invaluable.
+#+END_NOTES
 *** Apropos for commands
+  #+ATTR_REVEAL: :frag t
   [[./helm-apropos.png]]
+
+#+BEGIN_NOTES
+This is apropos inside Emacs. You can query it for Emacs' internal
+commands or just type in something and see what Emacs gives back to
+you. Also useful.
+#+END_NOTES
 *** Various 'describe' commands
+  #+ATTR_REVEAL: :frag t
   [[./spacemacs-describes.png]]
+  
+#+BEGIN_NOTES
+A few commands I won't go into detail, but they do have their place.
+Describe-key is particularly useful to know about the internal
+implementation of a keyboard shortcut.
+#+END_NOTES
 ** Helpful community
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag-idx (1 2 3 4) 
 - [[https://github.com/syl20bnr/spacemacs/][Github]]
 - [[https://gitter.im/syl20bnr/spacemacs][Gitter chat]]
 - [[http://spacemacs.org/doc/DOCUMENTATION][Quality documentation]]
 - Blog posts
+
 #+BEGIN_NOTES
 Spacemacs devs' are usually responsive to PRs (albeit somewhat slow to
 merge), there are lots of quality blog posts and new features are
@@ -150,6 +276,12 @@ them from having to think about what packages to install
 #+ATTR_REVEAL: :frag t
 In other words: preconfigured goodies for your favorite language.
 
+#+BEGIN_NOTES
+It does allow one some degree of flexibility, though. You can opt out
+of any package any time, and replace it by your own preferences if you
+know enough ELisp. So it's not something "set in stone" - just sane
+defaults, really (so sane that I almost never change them).
+#+END_NOTES
 ** Auto-completion
 Two backends for this: [[http://company-mode.github.io/][company]] and [[http://auto-complete.org/][auto-complete]]. Both are good on
 their own right.
@@ -171,6 +303,10 @@ But, if you're an Emacs user, you're probably better served by
 lighter-weight languages.
 
 I'm biased towards company, but only because it's Spacemacs' default.
+
+I'd mention something about SLIME, (Superior Lisp Interaction Mode for
+Emacs), but I'd better leave this for a presentation about Lisp-like
+languages.
 #+END_NOTES
 ** Syntax checking
 #+ATTR_REVEAL: :frag t
@@ -182,6 +318,11 @@ I'm biased towards company, but only because it's Spacemacs' default.
 #+ATTR_REVEAL: :frag t
 Basically anything that can output an Emacs-style "backtrace" can be
 hooked into it.
+
+#+BEGIN_NOTES
+So, despite claims of Emacs being the kitchen-sink editor, it is
+actually very modular and follows the Unix philosophy in this regard.
+#+END_NOTES
 ** Code snippets!
 #+ATTR_REVEAL: :frag t
 [[http://joaotavora.github.com/yasnippet/][Yasnippet]], Emacs' backend for code snippets, actually accepts Sublime
@@ -194,17 +335,31 @@ Text snippets.
 It also accepts inline Lisp code (so you can make decisions about how to expand a snippet based on the state of your editor - how cool is that?)
 
 #+BEGIN_NOTES
-TODO: make this last line be displayed inside the current slide! There must be a
-way to make it fit.
+The thing about inline Lisp code is used in Rails' snippets, btw -
+it knows where I am when I create a new concern/model/whatever, so it
+generates a skeleton accordingly. Very cool indeed.
 #+END_NOTES
 ** REPL support
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3)
 - Run a REPL inside the editor
 - Run commands while editing the file
 - REPLs get Vim-style keybindings for free
+
+#+BEGIN_NOTES
+The benefit of running a REPL inside the editor cannot be overstated -
+you basically remove all the turnaround time in the edit-compile-run
+cycle to the speed of your neurons and fingers.
+#+END_NOTES
 ** Obligatory REPL screenshot
 #+ATTR_REVEAL: :frag t
 [[./repl-screenshot.png]]
+
+#+BEGIN_NOTES
+Please DON'T ask me about the obfuscated JAPH/JARH at the end. I made
+it during one of my (many) sleepless nights and can't really remember
+every step I took until I made it look like this. Does it look cool /
+hacker / l33t / whatever? 
+#+END_NOTES
 ** Terminals
 #+ATTR_REVEAL: :frag t
 Emacs has its own terminal emulator. Actually, it has (at least) 3. Only the
@@ -215,10 +370,20 @@ ones in the shell layer will be shown here.
 - Works as a normal terminal emulator, with a few caveats
 - PAGER being the most annoying one
 - Multi-term because it allows one to easily switch between multiple instances
-*** 
-[[./ansi-term-correct.png]]
 #+BEGIN_NOTES
 Caveats: $PAGER must be cat, does not work well with more/less
+#+END_NOTES
+*** 
+[[./ansi-term-correct.png]]
+
+#+ATTR_REVEAL: :frag t
+- DON'T TRY TO RUN VI IN THIS!
+#+BEGIN_NOTES
+The thing about 'no vi keybindings' is because I use vi-style
+shortcuts in zsh. Cthulhu is going to eat your sweetest dreams. Or
+it'll just do weird stuff because Emacs won't know exactly the difference
+between what it should interpret as a command and what should be
+directed to Vi.
 #+END_NOTES
 *** eshell
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in roll-in)
@@ -233,6 +398,14 @@ Caveats: $PAGER must be cat, does not work well with more/less
 
   #+ATTR_REVEAL: :frag t
   (The story about how this happened is [[http://boingboing.net/2011/04/06/how-emacs-got-into-t.html][here]])
+
+#+BEGIN_NOTES
+I haven't seen the original, just the remake - and I'm not really sure
+which one of these this screenshot comes from. I think it's from the
+second one, scene he's in the arcade or something. But yeah, much
+better showing some actual hacking than 'the firewall is encrypted, I
+need more time, I need more time!'
+#+END_NOTES
 ** MELPA
 #+ATTR_REVEAL: :frag t
 From their [[https://melpa.org][website]]:
@@ -255,6 +428,12 @@ Extensible - contribute recipes via github, and we'll build the packages
 #+ATTR_REVEAL: :frag t
 Yeah, Emacs has its own apt-get/yum/emerge/whatever.
 
+#+ATTR_REVEAL: :frag t
+It goes a step further by working just like Vundle and deleting unused packages.
+
+#+ATTR_REVEAL: :frag t
+It also accepts Github packages! Gentoo-level bleeding edge.
+
 #+BEGIN_NOTES
 Did I mention Emacs has a package manager? After that, all else
 is...forgivable. Before Vimmers start complaining, you have Vundle.
@@ -272,19 +451,27 @@ Benefits:
 - Discoverable interface
   
   It makes git look easy...almost.
-- git-link
 - git-timemachine
+- git-link
 ** Status buffer
+#+ATTR_REVEAL: :frag t
 [[./magit-status.png]]
 ** Log
+#+ATTR_REVEAL: :frag t
+#+ATTR_HTML: :height 700px
 [[./magit-log.png]]
 ** Rebase
+#+ATTR_REVEAL: :frag t
 [[./magit-rebase.png]]
 ** Discoverable
+#+ATTR_REVEAL: :frag t
+#+ATTR_HTML: :height 700px
 [[./magit-discoverable.png]]
 ** Diff
+#+ATTR_REVEAL: :frag t
 [[./magit-diff.png]]
 *** Inline diff!
+#+ATTR_REVEAL: :frag t
 [[./magit-inline-diff.png]]
 ** git-timemachine
 #+ATTR_REVEAL: :frag t
@@ -294,13 +481,36 @@ Step through historic versions of git controlled file using everyone's favourite
 [[./git-timemachine.png]]
 
 #+BEGIN_NOTES
-TODO: make this fit inside the slide
+Workflow here is great, I use it all the time. See a revision I want
+to get back to? Flip around the file I want to investigate, just
+review it, if necessary I'll copy the commit hash with 'Y' and
+checkout with "SPC g uppercase c". It's so easy, it would make H.G.
+Wells proud.
+#+END_NOTES
+** git-link
+#+ATTR_REVEAL: :frag t
+From the project website:
+
+#+ATTR_REVEAL: :frag t
+#+BEGIN_QUOTE
+Interactive Emacs functions that create URLs for files and commits in GitHub/Bitbucket/GitLab/... repositories.
+#+END_QUOTE
+
+#+ATTR_REVEAL: :frag t
+- Spacemacs' integration makes git-link work seamlessly with git-timemachine
+
+#+BEGIN_NOTES
+So you will actually link to the current revision's commit, instead of
+linking directly to the branch. This behavior is only present in
+Spacemacs, AFAIK. 
 #+END_NOTES
 * fun fact
 #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag-idx (1 2 3) 
 - This presentation was made with Emacs' awesome [[http://orgmode.org/][Org-mode]].
 - Don't believe it? Look at the [[https://raw.githubusercontent.com/dcluna/SpacemacsPresentation/master/emacs-presentation.org][source]].
-- [[./spacemacs-presentation-source.png]]
+ [[./spacemacs-presentation-source.png]]
 * wow
 #+ATTR_REVEAL: :frag t
 [[./momacs.png]]
+#+ATTR_REVEAL: :frag t
+Demo time?
