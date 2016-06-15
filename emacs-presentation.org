@@ -380,7 +380,10 @@ Caveats: $PAGER must be cat, does not work well with more/less
 - DON'T TRY TO RUN VI IN THIS!
 #+BEGIN_NOTES
 The thing about 'no vi keybindings' is because I use vi-style
-shortcuts in zsh. Cthulhu is going to eat your sweetest dreams. Or
+shortcuts in zsh.
+
+After Don't try slide:
+Cthulhu is going to eat your sweetest dreams. Or
 it'll just do weird stuff because Emacs won't know exactly the difference
 between what it should interpret as a command and what should be
 directed to Vi.
@@ -514,3 +517,9 @@ Spacemacs, AFAIK.
 [[./momacs.png]]
 #+ATTR_REVEAL: :frag t
 Demo time?
+
+#+BEGIN_NOTES
+Started with a dog, couldn't help but end it with a cat. Funny enough,
+I just found out Spacemacs had this banner very recently. It made this
+presentation end on a high note, don't you think?
+#+END_NOTES
